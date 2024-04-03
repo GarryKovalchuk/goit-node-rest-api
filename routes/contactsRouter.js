@@ -5,7 +5,7 @@ import {
   deleteContact,
   createContact,
   updateContact,
-} from "../controllers/contactsControllers.js";
+} from "../controllers/contactControllers.js";
 import {
   createContactSchema,
   updateContactSchema,
