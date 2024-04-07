@@ -20,7 +20,6 @@ const contactSchema = new Schema(
   },
   {
     versionKey: false,
-    // timestamps: true  додає дату створення і останнього оновлення
   }
 );
 
