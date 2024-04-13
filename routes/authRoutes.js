@@ -5,7 +5,7 @@ import {
   fetchCurrentUser,
   fetchLogoutUser,
   fetchUpdateSubUser,
-} from "../controllers/authContollers.js";
+} from "../controllers/authControllers.js";
 import {
   userSignInSchema,
   usersSignUpSchema,
