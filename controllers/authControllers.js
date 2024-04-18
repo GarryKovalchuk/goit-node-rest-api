@@ -7,6 +7,12 @@ import {
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import gravatar from "gravatar";
+import path from "path";
+import fs from "fs/promises";
+import Jimp from "jimp";
+
+const avatarPath = path.resolve("public", "avatars");
 
 dotenv.config();
 
