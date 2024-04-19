@@ -5,6 +5,7 @@ import {
   fetchCurrentUser,
   fetchLogoutUser,
   fetchUpdateSubUser,
+  fetchUpdateUserAvatar,
 } from "../controllers/authControllers.js";
 import {
   userSignInSchema,
@@ -13,10 +14,12 @@ import {
 } from "../schemas/usersSchemas.js";
 import validateBody from "../helpers/validateBody.js";
 import authenticate from "../midllewares/authentic.js";
+import upload from "../midllewares/upload.js";
 
 const authRouter = express.Router();
 authRouter.post(
   "/register",
+  upload.single("avatarURL"),
   validateBody(usersSignUpSchema),
   fetchRegisterUser
 );
@@ -32,6 +35,12 @@ authRouter.patch(
   authenticate,
   validateBody(userUpdateSub),
   fetchUpdateSubUser
+);
+authRouter.patch(
+  "/avatars",
+  upload.single("avatarURL"),
+  authenticate,
+  fetchUpdateUserAvatar
 );
 
 export default authRouter;
