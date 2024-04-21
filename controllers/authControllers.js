@@ -113,8 +113,8 @@ export const fetchUpdateUserAvatar = async (req, res) => {
   const newPath = path.join(avatarPath, filename);
   const avatarURL = path.join("avatars", filename);
   Jimp.read(oldPath)
-    .then((lenna) => {
-      return lenna
+    .then((avatar) => {
+      return avatar
         .resize(250, 250)
         .quality(60)
         .write(newPath);
