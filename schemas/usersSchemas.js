@@ -20,3 +20,6 @@ export const userUpdateSub = Joi.object({
     "business"
   ),
 });
+export const userEmailSchema = Joi.object({
+  email: Joi.string().pattern(emailRegepxp).required(),
+});
