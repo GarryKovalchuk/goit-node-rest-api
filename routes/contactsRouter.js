@@ -11,7 +11,7 @@ import {
   updateContactSchema,
   updateContactSchemaStatus,
 } from "../schemas/contactsSchemas.js";
-import validateBody from "../helpers/validateBody.js";
+import { validateBody } from "../helpers/validateBody.js";
 import authenticate from "../midllewares/authentic.js";
 import isValidId from "../midllewares/isValidId.js";
 
